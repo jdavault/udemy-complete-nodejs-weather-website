@@ -41,7 +41,7 @@ app.get('/about', (req, res) => {
   res.render("about", {
     title: "About",
     name: "Joe Davault",
-    content: "About Me Page Content"
+    content: "This site was created by Joe Davault.  It uses data from mapbox.com and weatherstack.com to render weather forcasts for provided cities."
   })
 })
 

@@ -10,9 +10,8 @@ const getWeatherInfo = (location = "Phoneix") => {
           successMessage.textContent = ""
           errorMessage.textContent = data.error
         } else {
-          // console.log("Location: ", data.location)
-          // console.log("Forcast: ", data.forecast)
-          successMessage.textContent = `In ${data.location} ${data.forecast}`
+          successMessage.textContent = data.location
+          successMessage2.textContent = data.forecast
           errorMessage.textContent = ""
         }
       })
@@ -30,6 +29,7 @@ const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 
 const successMessage = document.querySelector('#success');
+const successMessage2 = document.querySelector('#success2');
 const errorMessage = document.querySelector('#error');
 
 successMessage.textContent = ""
