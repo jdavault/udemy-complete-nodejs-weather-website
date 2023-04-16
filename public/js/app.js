@@ -1,5 +1,5 @@
 const getWeatherInfo = (location = "Phoneix") => {
-  const url = `http://localhost:3003/weather?address=${location}`
+  const url = `/weather?address=${location}`
   errorMessage.textContent = "Loading...."
   fetch(url).then((response) => {
     console.log(response)
