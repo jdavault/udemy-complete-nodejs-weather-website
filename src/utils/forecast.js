@@ -25,11 +25,12 @@ export const forecast = (latitude, longitude, callback) => {
       const { code, info } = error
       callback(`There was an error connecting to the weather service.  Error code: ${code}, Error Message: ${info}.`, null)
     } else {
-      const { temperature, feelslike, weather_descriptions } = body.current
+      const { temperature, feelslike, weather_descriptions, humidity } = body.current
       const data = {
         temperature,
         feelslike,
         weather_descriptions,
+        humidity
       }
       callback(undefined, data)
     }

@@ -94,9 +94,9 @@ app.get('/weather', (req, res) => {
           error
         })
       }
-      const { weather_descriptions, temperature, feelslike } = forecastData
+      const { weather_descriptions, temperature, feelslike, humidity } = forecastData
 
-      const forecast = `In ${location} today its ${weather_descriptions[0]}.  It's currently ${temperature} degrees out, but it feels like ${feelslike} degrees.`;
+      const forecast = `In ${location} today its ${weather_descriptions[0]}.  It's currently ${temperature} degrees out, but it feels like ${feelslike} degrees. The current humidity is ${humidity}%`;
       //console.log(forecast)
 
       res.send({
