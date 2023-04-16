@@ -1,5 +1,3 @@
-console.log('Client side javascript file is loaded!')
-
 const getWeatherInfo = (location = "Phoneix") => {
   const url = `http://localhost:3003/weather?address=${location}`
   errorMessage.textContent = "Loading...."
